@@ -1,7 +1,7 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -9,9 +9,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     //Movimentation
     public float rotateSpeed = 3.0F, speedRun, speedWalk, speedSideWalk, speedRotation;
-    [System.NonSerialized]
-    public float speed = 3.0F;
-    private float horizontal, vertical;
+    private float speed = 3.0F, horizontal, vertical;
     private CharacterController controller;
     public Transform focusCamera;
     public bool inQuest = false;
@@ -38,7 +36,7 @@ public class PlayerBehaviour : MonoBehaviour
         anim.animator.SetFloat("horizontal", horizontal);
         anim.animator.SetFloat("vertical", vertical);
 
-        if (Input.GetKey(KeyCode.LeftShift) && horizontal > 0)
+        if (Input.GetKey(KeyCode.LeftShift) && vertical > 0)
         {
             speed = speedRun;
             anim.PlayAnimation(AnimationStates.RUN);

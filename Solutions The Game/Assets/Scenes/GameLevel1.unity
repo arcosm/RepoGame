@@ -313,7 +313,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4908175070107994, guid: 66939e9817c8d4245a2adcd8949133f4, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 13.148
+      value: 11.05
       objectReference: {fileID: 0}
     - target: {fileID: 4908175070107994, guid: 66939e9817c8d4245a2adcd8949133f4, type: 2}
       propertyPath: m_LocalRotation.x
@@ -345,6 +345,10 @@ Prefab:
       propertyPath: nPC
       value: 
       objectReference: {fileID: 1426691034}
+    - target: {fileID: 4920597201716238, guid: 66939e9817c8d4245a2adcd8949133f4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66939e9817c8d4245a2adcd8949133f4, type: 2}
   m_IsPrefabAsset: 0
