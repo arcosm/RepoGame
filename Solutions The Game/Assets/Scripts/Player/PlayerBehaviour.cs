@@ -38,7 +38,7 @@ public class PlayerBehaviour : MonoBehaviour
         anim.animator.SetFloat("horizontal", horizontal);
         anim.animator.SetFloat("vertical", vertical);
 
-        if (Input.GetKey(KeyCode.LeftShift) && horizontal == 0)
+        if (Input.GetKey(KeyCode.LeftShift) && horizontal > 0)
         {
             speed = speedRun;
             anim.PlayAnimation(AnimationStates.RUN);
@@ -52,6 +52,7 @@ public class PlayerBehaviour : MonoBehaviour
             }
             else if (horizontal != 0)
             {
+                speed = speedSideWalk;
                 anim.PlayAnimation(AnimationStates.SIDE_WALK);
             }
             else
