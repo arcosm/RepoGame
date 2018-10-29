@@ -19,7 +19,7 @@ public class AnimalBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Player") && other.GetComponent<Collider>() != GetComponent<Collider>())
         {
-            if (player.inQuest && player.animais.Count < 10)
+            if (player.inQuest && player.animais.Count < 5)
             {
                 player.animais.Add(this);
                 gameObject.SetActive(false);

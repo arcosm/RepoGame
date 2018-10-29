@@ -7,18 +7,20 @@ public class NPCBehaviour : MonoBehaviour
     private bool isPlayer = false;
     public Animator animator;
     public bool isConcluid = false;
+    private Dialogo fala;
+    public DialogoController dialogoController;
 
     // Use this for initialization
     void Start()
     {
-
+        fala = GetComponent<Dialogo>();
     }
 
     // Update is called once per frame
     void Update()
     {
         animator.SetBool("isPlayer", isPlayer);
-        if (player.animais.Count > 9)
+        if (player.animais.Count > 4)
         {
             isConcluid = true;
         }
@@ -28,7 +30,17 @@ public class NPCBehaviour : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && GetCollider(other))
         {
+            dialogoController.painelDialogo.SetActive(true);
             isPlayer = true;
+           /* if (!fala.dialogoConcluido)
+            {
+
+            }
+            else
+            {
+
+            }
+            fala.dialogoConcluido = true;*/
         }
 
     }
@@ -36,13 +48,14 @@ public class NPCBehaviour : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && GetCollider(other))
         {
+            dialogoController.painelDialogo.SetActive(false);
             isPlayer = false;
             player.inQuest = true;
 
             if (isConcluid)
             {
                 player.inQuest = false;
-                player.animais.RemoveRange(0, 10);
+                player.animais.RemoveRange(0, 5);
                 player.textCount.text = player.animais.Count.ToString();
                 SetScene();
             }

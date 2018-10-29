@@ -36,6 +36,7 @@ GameObject:
   - component: {fileID: 4795382282283370}
   - component: {fileID: 33301533749595028}
   - component: {fileID: 23994976375714884}
+  - component: {fileID: 64104411107510600}
   m_Layer: 0
   m_Name: English_thatched_house
   m_TagString: Untagged
@@ -49,14 +50,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1418782389873020}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.81, y: 0.22, z: 40.02}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 26.4, y: 0.00000070845215, z: 46.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4795382282283370}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4795382282283370
 Transform:
   m_ObjectHideFlags: 1
@@ -111,4 +112,18 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1618046969604190}
+  m_Mesh: {fileID: 4300002, guid: aeba306d99ce2e44c9358b4f7ea23248, type: 3}
+--- !u!64 &64104411107510600
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1618046969604190}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: aeba306d99ce2e44c9358b4f7ea23248, type: 3}

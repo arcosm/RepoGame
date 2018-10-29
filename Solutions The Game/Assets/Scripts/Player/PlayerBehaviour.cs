@@ -25,6 +25,7 @@ public class PlayerBehaviour : MonoBehaviour
         speed = speedWalk;
         controller = GetComponent<CharacterController>();
         textCount.text = animais.Count.ToString();
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
