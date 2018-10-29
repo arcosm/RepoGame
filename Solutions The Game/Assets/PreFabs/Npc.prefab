@@ -1334,8 +1334,12 @@ MonoBehaviour:
   player: {fileID: 0}
   animator: {fileID: 95829560264058270}
   isConcluid: 0
-  gameController: {fileID: 114038024042507186, guid: 7d44b0957f7d73040b7ea7b04f2e553d,
-    type: 2}
+  textFalas: 
+  LPS: 10
+  tempo: 0
+  textsFalas:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!136 &136806912948712814
 CapsuleCollider:
   m_ObjectHideFlags: 1

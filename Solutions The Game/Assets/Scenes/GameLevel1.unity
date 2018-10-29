@@ -724,7 +724,7 @@ Transform:
   - {fileID: 843014688}
   - {fileID: 1976004642}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &463490853
 Prefab:
@@ -736,7 +736,7 @@ Prefab:
     - target: {fileID: 224749126834938562, guid: feb1c842c7421a34a9d399bebf592a3f,
         type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224749126834938562, guid: feb1c842c7421a34a9d399bebf592a3f,
         type: 2}
@@ -776,7 +776,7 @@ Prefab:
     - target: {fileID: 224749126834938562, guid: feb1c842c7421a34a9d399bebf592a3f,
         type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224749126834938562, guid: feb1c842c7421a34a9d399bebf592a3f,
         type: 2}
@@ -828,6 +828,46 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114590721990490506, guid: feb1c842c7421a34a9d399bebf592a3f,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114590721990490506, guid: feb1c842c7421a34a9d399bebf592a3f,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114590721990490506, guid: feb1c842c7421a34a9d399bebf592a3f,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114682690039214134, guid: feb1c842c7421a34a9d399bebf592a3f,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114682690039214134, guid: feb1c842c7421a34a9d399bebf592a3f,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114682690039214134, guid: feb1c842c7421a34a9d399bebf592a3f,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114590721990490506, guid: feb1c842c7421a34a9d399bebf592a3f,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 114682690039214134, guid: feb1c842c7421a34a9d399bebf592a3f,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feb1c842c7421a34a9d399bebf592a3f, type: 2}
   m_IsPrefabAsset: 0
@@ -952,7 +992,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &655695073 stripped
 Transform:
@@ -990,7 +1030,7 @@ Transform:
   - {fileID: 332878394}
   - {fileID: 1011708364}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &843014688 stripped
 Transform:
@@ -1600,87 +1640,11 @@ Prefab:
     - {fileID: 9500000, guid: b9d770c55e0965649aeddb3b22258e13, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b9d770c55e0965649aeddb3b22258e13, type: 3}
   m_IsPrefabAsset: 0
---- !u!1 &1393286093
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1393286095}
-  - component: {fileID: 1393286094}
-  m_Layer: 0
-  m_Name: DialogoController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1393286094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1393286093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 021d3018d6416d0449c432543e6d7111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  painelDialogo: {fileID: 1754867139}
-  textIngles: {fileID: 1950296561}
-  textPortugues: {fileID: 333464808}
---- !u!4 &1393286095
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1393286093}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 400, y: 104.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1454959460 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 108308290944357626, guid: 5ac953be8218f824fa554a22ee4f39bc,
     type: 2}
   m_PrefabInternal: {fileID: 112147547}
---- !u!1 &1527953941
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1527953942}
-  m_Layer: 5
-  m_Name: DialogoController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1527953942
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1527953941}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 157}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1559052590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1860,7 +1824,7 @@ Transform:
   - {fileID: 846843093}
   - {fileID: 1559052591}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1754867139
 GameObject:
@@ -1937,14 +1901,24 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114876610160725984, guid: 0f19b7e02137f3d47823c6b4e4a5fd33,
         type: 2}
-      propertyPath: dialogoController
-      value: 
-      objectReference: {fileID: 1393286094}
-    - target: {fileID: 114876610160725984, guid: 0f19b7e02137f3d47823c6b4e4a5fd33,
-        type: 2}
       propertyPath: player
       value: 
       objectReference: {fileID: 153253565}
+    - target: {fileID: 114876610160725984, guid: 0f19b7e02137f3d47823c6b4e4a5fd33,
+        type: 2}
+      propertyPath: textsFalas.Array.data[0]
+      value: 
+      objectReference: {fileID: 1950296561}
+    - target: {fileID: 114876610160725984, guid: 0f19b7e02137f3d47823c6b4e4a5fd33,
+        type: 2}
+      propertyPath: textsFalas.Array.data[1]
+      value: 
+      objectReference: {fileID: 333464808}
+    - target: {fileID: 114876610160725984, guid: 0f19b7e02137f3d47823c6b4e4a5fd33,
+        type: 2}
+      propertyPath: LPS
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f19b7e02137f3d47823c6b4e4a5fd33, type: 2}
   m_IsPrefabAsset: 0
