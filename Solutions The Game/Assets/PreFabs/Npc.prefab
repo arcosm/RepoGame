@@ -172,6 +172,8 @@ GameObject:
   - component: {fileID: 114876610160725984}
   - component: {fileID: 136806912948712814}
   - component: {fileID: 136808658782506186}
+  - component: {fileID: 114608527788139602}
+  - component: {fileID: 114703681285851146}
   m_Layer: 0
   m_Name: Npc
   m_TagString: Untagged
@@ -1154,14 +1156,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1206469965089776}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 6.79, y: -0.04, z: 40.6}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.02, y: -0.05, z: 24.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4738879655125400}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4819208059485712
 Transform:
   m_ObjectHideFlags: 1
@@ -1320,6 +1322,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114608527788139602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1206469965089776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 815698772a662a74198dc1e222ee1147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelBox: {fileID: 0}
+  arquivo: {fileID: 4900000, guid: 6be6ab7a46a83624abadf275f1aa4294, type: 3}
+  texto: []
+  textoMensagem: {fileID: 0}
+--- !u!114 &114703681285851146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1206469965089776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8172c3a98069e5b4fb819a4c60a510c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelBox: {fileID: 0}
+  arquivo: {fileID: 4900000, guid: 34250c4d23ddc7b498c1e8db70ac4041, type: 3}
+  texto: []
+  textoMensagem: {fileID: 0}
 --- !u!114 &114876610160725984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1334,12 +1366,7 @@ MonoBehaviour:
   player: {fileID: 0}
   animator: {fileID: 95829560264058270}
   isConcluid: 0
-  textFalas: 
-  LPS: 10
-  tempo: 0
-  textsFalas:
-  - {fileID: 0}
-  - {fileID: 0}
+  tempoTotal: 0
 --- !u!136 &136806912948712814
 CapsuleCollider:
   m_ObjectHideFlags: 1

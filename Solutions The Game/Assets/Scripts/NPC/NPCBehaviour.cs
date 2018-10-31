@@ -1,7 +1,5 @@
-﻿using System.IO;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class NPCBehaviour : MonoBehaviour
 {
@@ -9,31 +7,39 @@ public class NPCBehaviour : MonoBehaviour
     private bool isPlayer = false;
     public Animator animator;
     public bool isConcluid = false;
-    public string textFalas;
+    private FalaEmIngles emIngles;
+    private FalaEmPortugues emPortugues;
 
-    public float LPS, tempo;
-    int i;
-    public Text[] textsFalas;
-    public Text falaAtual;
+    public float tempoTotal;
+    private float currenttempo;
 
     // Use this for initialization
     void Start()
     {
-        textFalas = File.ReadAllText("Assets/ArtWork/Txt/Falas.txt");
-        textsFalas[0].text = "";
-        textsFalas[1].text = "";
+        emIngles = GetComponent<FalaEmIngles>();
+        emPortugues = GetComponent<FalaEmPortugues>();
+        emIngles.SetActeve(false);
+        emPortugues.SetActeve(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        LerFalas();
         animator.SetBool("isPlayer", isPlayer);
         if (player.animais.Count > 4)
         {
             isConcluid = true;
         }
 
+        if (isPlayer)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                emIngles.SetFala();
+                emPortugues.SetFala();
+            }
+        }
+       
     }
 
     private void OnTriggerEnter(Collider other)
@@ -42,31 +48,10 @@ public class NPCBehaviour : MonoBehaviour
         {
             isPlayer = true;
         }
-
-    }
-
-    void LerFalas()
-    {
-        if (tempo > 2)
-            tempo = 0;
-
-        tempo += Time.deltaTime;
-        if (tempo > (1f / LPS) && i < textFalas.Length)
-        {
-            if (textFalas[i] == '-')
-            {
-                i++;
-                int novoFala = textFalas[i];
-                novoFala -= 48;
-                print(novoFala);
-                falaAtual = textsFalas[novoFala];
-            }
-            else
-            {
-                falaAtual.text += textFalas[i];                
-            }
-            i++;            
-        }
+        emIngles.SetActeve(true);
+        emPortugues.SetActeve(true);
+        emIngles.SetFala();
+        emPortugues.SetFala();
     }
 
     private void OnTriggerExit(Collider other)
@@ -84,6 +69,8 @@ public class NPCBehaviour : MonoBehaviour
                 SetScene();
             }
         }
+        emIngles.SetActeve(false);
+        emPortugues.SetActeve(false);
     }
 
     public bool GetCollider(Collider other)
