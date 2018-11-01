@@ -24,6 +24,7 @@ public class AnimalBehaviour : MonoBehaviour
                 player.animais.Add(this);
                 gameObject.SetActive(false);
                 player.textCount.text = player.animais.Count.ToString();
+                player.nPC.SetCountAnimais();
             }
         }
     }

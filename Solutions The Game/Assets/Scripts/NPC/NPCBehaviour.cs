@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class NPCBehaviour : MonoBehaviour
 {
@@ -9,17 +8,23 @@ public class NPCBehaviour : MonoBehaviour
     public bool isConcluid = false;
     private FalaEmIngles emIngles;
     private FalaEmPortugues emPortugues;
+    private NumerosEmIngles numerosEmIngles;
+    private NumerosEmPortugues numerosEmPortugues;
 
-    public float tempoTotal;
-    private float currenttempo;
+    public GameObject[] Animais = new GameObject[4];
+    private int ind = -1;
 
     // Use this for initialization
     void Start()
     {
         emIngles = GetComponent<FalaEmIngles>();
         emPortugues = GetComponent<FalaEmPortugues>();
-        emIngles.SetActeve(false);
-        emPortugues.SetActeve(false);
+        numerosEmIngles = GetComponent<NumerosEmIngles>();
+        numerosEmPortugues = GetComponent<NumerosEmPortugues>();
+        SetVisibilideAnimals(ind);
+        numerosEmIngles.SetActeve(true);
+        numerosEmPortugues.SetActeve(true);
+        SetCountAnimais();
     }
 
     // Update is called once per frame
@@ -38,8 +43,7 @@ public class NPCBehaviour : MonoBehaviour
                 emIngles.SetFala();
                 emPortugues.SetFala();
             }
-        }
-       
+        }        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -48,29 +52,52 @@ public class NPCBehaviour : MonoBehaviour
         {
             isPlayer = true;
         }
-        emIngles.SetActeve(true);
-        emPortugues.SetActeve(true);
-        emIngles.SetFala();
-        emPortugues.SetFala();
+        if (!player.inQuest)
+        {
+            emIngles.SetActeve(true);
+            emPortugues.SetActeve(true);
+            emIngles.SetFala();
+            emPortugues.SetFala();
+        }
+        if (isConcluid)
+        {
+            emIngles.SetActeve(true);
+            emPortugues.SetActeve(true);
+            emIngles.SetFala();
+            emPortugues.SetFala();
+        }
+        if (ind < 0 && !player.inQuest)
+        {
+            ind = 0;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        emIngles.SetActeve(false);
+        emPortugues.SetActeve(false);
         if (other.gameObject.CompareTag("Player") && GetCollider(other))
         {
             isPlayer = false;
             player.inQuest = true;
+            SetVisibilideAnimals(ind);
 
             if (isConcluid)
             {
                 player.inQuest = false;
                 player.animais.RemoveRange(0, 5);
                 player.textCount.text = player.animais.Count.ToString();
-                SetScene();
+                SetCountAnimais();
+                SetCountAnimais();
+                ind++;
+                isConcluid = false;
+                if(ind > 3)
+                {
+                    ind = 0;
+                }
             }
         }
-        emIngles.SetActeve(false);
-        emPortugues.SetActeve(false);
+
     }
 
     public bool GetCollider(Collider other)
@@ -78,18 +105,81 @@ public class NPCBehaviour : MonoBehaviour
         return other.GetComponent<Collider>() != GetComponent<Collider>();
     }
 
-    public void SetScene()
+    public void SetVisibilideAnimals(int i)
     {
-
-        if (SceneManager.GetSceneByBuildIndex(1).name == "GameLevel1")
+        switch (i)
         {
-            SceneManager.LoadScene("GameLevel2");
-            return;
+            case 0:
+                {
+                    Animais[0].SetActive(true);
+                }
+                break;
+            case 1:
+                {
+                    Animais[1].SetActive(true);
+                }
+                break;
+            case 2:
+                {
+                    Animais[2].SetActive(true);
+                }
+                break;
+            case 3:
+                {
+                    Animais[3].SetActive(true);
+                }
+                break;
+            default:
+                {
+                    Animais[0].SetActive(false);
+                    Animais[1].SetActive(false);
+                    Animais[2].SetActive(false);
+                    Animais[3].SetActive(false);
+                }
+                break;
         }
+    }
 
-        if (SceneManager.GetSceneByBuildIndex(2).name == "GameLevel2")
+    public void SetCountAnimais()
+    {
+        switch (player.animais.Count)
         {
-            SceneManager.LoadScene("GameLevel3");
+            case 0:
+                {
+                    numerosEmIngles.SetFala();
+                    numerosEmPortugues.SetFala();
+                }
+                break;
+            case 1:
+                {
+                    numerosEmIngles.SetFala();
+                    numerosEmPortugues.SetFala();
+                }
+                break;
+            case 2:
+                {
+                    numerosEmIngles.SetFala();
+                    numerosEmPortugues.SetFala();
+                }
+                break;
+            case 3:
+                {
+                    numerosEmIngles.SetFala();
+                    numerosEmPortugues.SetFala();
+                }
+                break;
+            case 4:
+                {
+                    numerosEmIngles.SetFala();
+                    numerosEmPortugues.SetFala();
+                }
+                break;
+            case 5:
+                {
+                    numerosEmIngles.SetFala();
+                    numerosEmPortugues.SetFala();
+                }
+                break;
         }
     }
 }
